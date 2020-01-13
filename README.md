@@ -1,10 +1,10 @@
 # 生成反向互补序列
 ## Requirements analysis
 
-### Requirement
+### Original requirement
 
-* 生成一段序列(800bp±)的反向互补序列
-* 支持批量导入导出
+1. 生成一段序列(800bp±)的反向互补序列
+1. 支持批量导入导出
 
 ### BA
 
@@ -12,10 +12,10 @@ no big deal, just for fun :joy: :joy: :joy:
 
 ### References
 
-<http://wikihow.com/Find-the-Reverse-Complement-of-a-DNA-Sequence>
-FASTA
+> <http://wikihow.com/Find-the-Reverse-Complement-of-a-DNA-Sequence>
+> [FASTA format :link:](https://en.wikipedia.org/wiki/FASTA_format)
 
-## Solution
+## Solutions
 
 ### Solution A
 
@@ -23,14 +23,26 @@ FASTA
 > [BioInformatics :link: ](http://www.bioinformatics.org/sms/rev_comp.html)
 > [GenScript :link: ](https://www.genscript.com/sms2/rev_comp.html)
 
-* 可以支持长度为800bp+的序列，但不支持自动批量导入导出。
+* 可以支持长度为800bp+的FASTA格式的序列，但不支持自动批量导入导出。
 * 手动拼接可以实现批量导入导出。
-具体方法是在每段序列前添加单独一行
+具体方法是将多个DNA序列序列化为FASTA格式的序列直接拼接。
+> FASTA format is a text-based format for representing either nucleotide sequences or peptide sequences, in which base pairs or amino acids are represented using single-letter codes. A sequence in FASTA format begins with a single-line description, followed by lines of sequence data. The description line is distinguished from the sequence data by a greater-than (">") symbol in the first column. It is recommended that all lines of text be shorter than 80 characters in length.
+
+> An example sequence in FASTA format is:
 ```
->Sequence-name/no
+>gi|186681228|ref|YP_001864424.1| phycoerythrobilin:ferredoxin oxidoreductase
+MNSERSDVTLYQPFLDYAIAYMRSRLDLEPYPIPTGFESNSAVVGKGKNQEEVVTTSYAFQTAKLRQIRA
+AHVQGGNSLQVLNFVIFPHLNYDLPFFGADLVTLPGGHLIALDMQPLFRDDSAYQAKYTEPILPIFHAHQ
+QHLSWGGDFPEEAQPFFSPAFLWTRPQETAVVETQVFAAFKDYLKAYLDFVEQAEAVTDSQNLVAIKQAQ
+LRYLRYRAEKDPARGMFKRFYGAEWTEEYIHGFLFDLERKLTVVK
 ```
-名字或者编号自拟。
-序列结束换行即可，只要下一段序列有`>Sequence-name/no`开头，是否空行无所谓
+> Sequences are expected to be represented in the standard IUB/IUPAC amino acid and nucleic acid codes, with these exceptions:
+> * lower-case letters are accepted and are mapped into upper-case;
+> * a single hyphen or dash can be used to represent a gap of indeterminate length;
+> * in amino acid sequences, U and * are acceptable letters (see below).
+> * any numerical digits in the query sequence should either be removed or replaced by appropriate letter codes (e.g., N for unknown nucleic acid residue or X for unknown amino acid residue).
+> [:link:](https://zhanglab.ccmb.med.umich.edu/FASTA/)
+
 
 ### Solution B
 
