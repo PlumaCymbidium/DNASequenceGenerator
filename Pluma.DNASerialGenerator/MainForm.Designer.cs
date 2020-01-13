@@ -43,6 +43,7 @@
             this.rtx_OriginSerials.Size = new System.Drawing.Size(729, 167);
             this.rtx_OriginSerials.TabIndex = 0;
             this.rtx_OriginSerials.Text = "";
+            this.rtx_OriginSerials.TextChanged += new System.EventHandler(this.rtx_OriginSerials_TextChanged);
             // 
             // lbl_Input
             // 
@@ -69,6 +70,7 @@
             this.rtx_OutputSerials.Size = new System.Drawing.Size(729, 193);
             this.rtx_OutputSerials.TabIndex = 3;
             this.rtx_OutputSerials.Text = "";
+            this.rtx_OutputSerials.TextChanged += new System.EventHandler(this.rtx_OutputSerials_TextChanged);
             // 
             // btn_submit
             // 
@@ -78,6 +80,7 @@
             this.btn_submit.TabIndex = 4;
             this.btn_submit.Text = "Submit";
             this.btn_submit.UseVisualStyleBackColor = true;
+            this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
             // 
             // btn_Clear
             // 
@@ -87,6 +90,7 @@
             this.btn_Clear.TabIndex = 5;
             this.btn_Clear.Text = "Clear";
             this.btn_Clear.UseVisualStyleBackColor = true;
+            this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
             // 
             // MainForm
             // 

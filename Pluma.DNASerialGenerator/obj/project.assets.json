@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ChenZeZhong\\source\\repos\\Pluma.DNASerialGenerator\\Pluma.DNASerialGenerator\\Pluma.DNASerialGenerator.csproj",
+      "projectUniqueName": "C:\\Users\\ChenZeZhong\\source\\repos\\Pluma.DNASerialGenerator\\DNASerialGenerator\\Pluma.DNASerialGenerator\\Pluma.DNASerialGenerator.csproj",
       "projectName": "Pluma.DNASerialGenerator",
-      "projectPath": "C:\\Users\\ChenZeZhong\\source\\repos\\Pluma.DNASerialGenerator\\Pluma.DNASerialGenerator\\Pluma.DNASerialGenerator.csproj",
+      "projectPath": "C:\\Users\\ChenZeZhong\\source\\repos\\Pluma.DNASerialGenerator\\DNASerialGenerator\\Pluma.DNASerialGenerator\\Pluma.DNASerialGenerator.csproj",
       "packagesPath": "C:\\Users\\ChenZeZhong\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ChenZeZhong\\source\\repos\\Pluma.DNASerialGenerator\\Pluma.DNASerialGenerator\\obj\\",
+      "outputPath": "C:\\Users\\ChenZeZhong\\source\\repos\\Pluma.DNASerialGenerator\\DNASerialGenerator\\Pluma.DNASerialGenerator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

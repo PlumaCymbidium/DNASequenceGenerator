@@ -49,10 +49,10 @@ LRYLRYRAEKDPARGMFKRFYGAEWTEEYIHGFLFDLERKLTVVK
 ### Solution B
 
 #### Development log
-[Updates to .NET Core Windows Forms designer in Visual Studio 16.5 Preview 1](https://devblogs.microsoft.com/dotnet/updates-to-net-core-windows-forms-designer-in-visual-studio-16-5-preview-1/)
-Update Visual Studio Enterprise 2019 16.4.2 -> Preview 16.5.0 Preview 1.0
+[Updates to .NET Core Windows Forms designer in Visual Studio 16.5 Preview 1](https://devblogs.microsoft.com/dotnet/updates-to-net-core-windows-forms-designer-in-visual-studio-16-5-preview-1/)  
+Update Visual Studio Enterprise 2019 16.4.2(current latest version) -> Preview 16.5.0 Preview 1.0
 
 
 ### Solution C
 
-use python command
+Use Python's existing algorithm library

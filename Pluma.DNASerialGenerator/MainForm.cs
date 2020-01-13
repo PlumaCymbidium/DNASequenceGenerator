@@ -17,5 +17,24 @@ namespace Pluma.DNASerialGenerator
             InitializeComponent();
         }
 
+        private void rtx_OriginSerials_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rtx_OutputSerials_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_submit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Clear_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
