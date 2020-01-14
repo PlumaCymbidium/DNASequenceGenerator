@@ -34,11 +34,15 @@
             this.rtx_OutputSerials = new System.Windows.Forms.RichTextBox();
             this.btn_submit = new System.Windows.Forms.Button();
             this.btn_Clear = new System.Windows.Forms.Button();
+            this.cmb_Counterpart = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_Import = new System.Windows.Forms.Button();
+            this.btn_Export = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // rtx_OriginSerials
             // 
-            this.rtx_OriginSerials.Location = new System.Drawing.Point(77, 81);
+            this.rtx_OriginSerials.Location = new System.Drawing.Point(77, 123);
             this.rtx_OriginSerials.Name = "rtx_OriginSerials";
             this.rtx_OriginSerials.Size = new System.Drawing.Size(729, 167);
             this.rtx_OriginSerials.TabIndex = 0;
@@ -48,7 +52,7 @@
             // lbl_Input
             // 
             this.lbl_Input.AutoSize = true;
-            this.lbl_Input.Location = new System.Drawing.Point(77, 47);
+            this.lbl_Input.Location = new System.Drawing.Point(77, 103);
             this.lbl_Input.Name = "lbl_Input";
             this.lbl_Input.Size = new System.Drawing.Size(90, 17);
             this.lbl_Input.TabIndex = 1;
@@ -57,7 +61,7 @@
             // lbl_Output
             // 
             this.lbl_Output.AutoSize = true;
-            this.lbl_Output.Location = new System.Drawing.Point(77, 269);
+            this.lbl_Output.Location = new System.Drawing.Point(77, 293);
             this.lbl_Output.Name = "lbl_Output";
             this.lbl_Output.Size = new System.Drawing.Size(100, 17);
             this.lbl_Output.TabIndex = 2;
@@ -92,15 +96,59 @@
             this.btn_Clear.UseVisualStyleBackColor = true;
             this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
             // 
+            // cmb_Counterpart
+            // 
+            this.cmb_Counterpart.FormattingEnabled = true;
+            this.cmb_Counterpart.Items.AddRange(new object[] {
+            "Reverse-complement",
+            "Reverse",
+            "Complement"});
+            this.cmb_Counterpart.Location = new System.Drawing.Point(77, 65);
+            this.cmb_Counterpart.Name = "cmb_Counterpart";
+            this.cmb_Counterpart.Size = new System.Drawing.Size(257, 25);
+            this.cmb_Counterpart.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(77, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 17);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Counterpart: ";
+            // 
+            // btn_Import
+            // 
+            this.btn_Import.Location = new System.Drawing.Point(77, 527);
+            this.btn_Import.Name = "btn_Import";
+            this.btn_Import.Size = new System.Drawing.Size(75, 26);
+            this.btn_Import.TabIndex = 8;
+            this.btn_Import.Text = "Import";
+            this.btn_Import.UseVisualStyleBackColor = true;
+            this.btn_Import.Click += new System.EventHandler(this.btn_Import_Click);
+            // 
+            // btn_Export
+            // 
+            this.btn_Export.Location = new System.Drawing.Point(199, 527);
+            this.btn_Export.Name = "btn_Export";
+            this.btn_Export.Size = new System.Drawing.Size(75, 26);
+            this.btn_Export.TabIndex = 9;
+            this.btn_Export.Text = "Export";
+            this.btn_Export.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
-            this.ClientSize = new System.Drawing.Size(962, 597);
+            this.ClientSize = new System.Drawing.Size(879, 584);
+            this.Controls.Add(this.btn_Export);
+            this.Controls.Add(this.btn_Import);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cmb_Counterpart);
+            this.Controls.Add(this.rtx_OriginSerials);
+            this.Controls.Add(this.lbl_Input);
+            this.Controls.Add(this.lbl_Output);
             this.Controls.Add(this.btn_Clear);
             this.Controls.Add(this.btn_submit);
             this.Controls.Add(this.rtx_OutputSerials);
-            this.Controls.Add(this.lbl_Output);
-            this.Controls.Add(this.lbl_Input);
-            this.Controls.Add(this.rtx_OriginSerials);
             this.Name = "MainForm";
             this.Text = "DNA Serial Generator";
             this.ResumeLayout(false);
@@ -116,6 +164,10 @@
         private System.Windows.Forms.RichTextBox rtx_OutputSerials;
         private System.Windows.Forms.Button btn_submit;
         private System.Windows.Forms.Button btn_Clear;
+        private System.Windows.Forms.ComboBox cmb_Counterpart;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_Import;
+        private System.Windows.Forms.Button btn_Export;
     }
 }
 
