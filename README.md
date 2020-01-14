@@ -47,13 +47,13 @@ LRYLRYRAEKDPARGMFKRFYGAEWTEEYIHGFLFDLERKLTVVK
 > * a single hyphen or dash can be used to represent a gap of indeterminate length;
 > * in amino acid sequences, U and * are acceptable letters (see below).
 > * any numerical digits in the query sequence should either be removed or replaced by appropriate letter codes (e.g., N for unknown nucleic acid residue or X for unknown amino acid residue).  
-> [:link:](https://zhanglab.ccmb.med.umich.edu/FASTA/)  
+> Reference[:link:](https://zhanglab.ccmb.med.umich.edu/FASTA/)  
 
 ### Solution B
 
 #### Development log
 
-* winform based on .Net Core does not yet support desinger :unamused: :unamused: :unamused:
+* winform based on .Net Core does not yet support desinger :unamused: :unamused: :unamused:  
 [Updates to .NET Core Windows Forms designer in Visual Studio 16.5 Preview 1](https://devblogs.microsoft.com/dotnet/updates-to-net-core-windows-forms-designer-in-visual-studio-16-5-preview-1/)  
 Update Visual Studio Enterprise 2019 16.4.2(current latest version) -> Preview 16.5.0 Preview 1.0(current latest preview version) :smirk:
 
@@ -64,3 +64,6 @@ Update Visual Studio Enterprise 2019 16.4.2(current latest version) -> Preview 1
 ### Solution C
 
 Use Python's existing algorithm library :smiley:
+
+> 'always do sober what you'd do drunk'
+> 

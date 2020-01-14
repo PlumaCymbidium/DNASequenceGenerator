@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "Pluma.DNASerialGenerator.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Pluma.DNASerialGenerator.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Pluma.DNASerialGenerator.Core.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Pluma.DNASerialGenerator.Core/1.0.0": {
+      "type": "project",
+      "path": "../Pluma.DNASerialGenerator.Core/Pluma.DNASerialGenerator.Core.csproj",
+      "msbuildProject": "../Pluma.DNASerialGenerator.Core/Pluma.DNASerialGenerator.Core.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "Pluma.DNASerialGenerator.Core >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\ChenZeZhong\\.nuget\\packages\\": {},
@@ -37,7 +56,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ChenZeZhong\\source\\repos\\Pluma.DNASerialGenerator\\DNASerialGenerator\\Pluma.DNASerialGenerator.Core\\Pluma.DNASerialGenerator.Core.csproj": {
+              "projectPath": "C:\\Users\\ChenZeZhong\\source\\repos\\Pluma.DNASerialGenerator\\DNASerialGenerator\\Pluma.DNASerialGenerator.Core\\Pluma.DNASerialGenerator.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

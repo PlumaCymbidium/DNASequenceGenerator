@@ -6,4 +6,8 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Pluma.DNASerialGenerator.Core\Pluma.DNASerialGenerator.Core.csproj" />
+  </ItemGroup>
+
 </Project>

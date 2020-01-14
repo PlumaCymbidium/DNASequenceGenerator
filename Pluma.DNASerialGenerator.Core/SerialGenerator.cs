@@ -17,7 +17,7 @@ namespace Pluma.DNASerialGenerator.Core
         {
             char[] basePairs = serial.ToCharArray();
             string complementarySerial = "";
-            foreach(char basePair in basePairs)
+            foreach (char basePair in basePairs)
             {
                 switch (basePair)
                 {
@@ -46,4 +46,11 @@ namespace Pluma.DNASerialGenerator.Core
             return ReverseSerial(complementarySerial);
         }
     }
+}
+
+public enum CountpartType
+{
+    ReverseComplement = 0,
+    Reverse = 1,
+    Complement = 2
 }

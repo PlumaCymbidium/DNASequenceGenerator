@@ -32,7 +32,7 @@
             this.lbl_Input = new System.Windows.Forms.Label();
             this.lbl_Output = new System.Windows.Forms.Label();
             this.rtx_OutputSerials = new System.Windows.Forms.RichTextBox();
-            this.btn_submit = new System.Windows.Forms.Button();
+            this.btn_Submit = new System.Windows.Forms.Button();
             this.btn_Clear = new System.Windows.Forms.Button();
             this.cmb_Counterpart = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -76,15 +76,15 @@
             this.rtx_OutputSerials.Text = "";
             this.rtx_OutputSerials.TextChanged += new System.EventHandler(this.rtx_OutputSerials_TextChanged);
             // 
-            // btn_submit
+            // btn_Submit
             // 
-            this.btn_submit.Location = new System.Drawing.Point(731, 527);
-            this.btn_submit.Name = "btn_submit";
-            this.btn_submit.Size = new System.Drawing.Size(75, 26);
-            this.btn_submit.TabIndex = 4;
-            this.btn_submit.Text = "Submit";
-            this.btn_submit.UseVisualStyleBackColor = true;
-            this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
+            this.btn_Submit.Location = new System.Drawing.Point(731, 527);
+            this.btn_Submit.Name = "btn_Submit";
+            this.btn_Submit.Size = new System.Drawing.Size(75, 26);
+            this.btn_Submit.TabIndex = 4;
+            this.btn_Submit.Text = "Submit";
+            this.btn_Submit.UseVisualStyleBackColor = true;
+            this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click);
             // 
             // btn_Clear
             // 
@@ -107,6 +107,7 @@
             this.cmb_Counterpart.Name = "cmb_Counterpart";
             this.cmb_Counterpart.Size = new System.Drawing.Size(257, 25);
             this.cmb_Counterpart.TabIndex = 6;
+            this.cmb_Counterpart.SelectedIndexChanged += new System.EventHandler(this.cmb_Counterpart_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -147,7 +148,7 @@
             this.Controls.Add(this.lbl_Input);
             this.Controls.Add(this.lbl_Output);
             this.Controls.Add(this.btn_Clear);
-            this.Controls.Add(this.btn_submit);
+            this.Controls.Add(this.btn_Submit);
             this.Controls.Add(this.rtx_OutputSerials);
             this.Name = "MainForm";
             this.Text = "DNA Serial Generator";
@@ -162,7 +163,7 @@
         private System.Windows.Forms.Label lbl_Input;
         private System.Windows.Forms.Label lbl_Output;
         private System.Windows.Forms.RichTextBox rtx_OutputSerials;
-        private System.Windows.Forms.Button btn_submit;
+        private System.Windows.Forms.Button btn_Submit;
         private System.Windows.Forms.Button btn_Clear;
         private System.Windows.Forms.ComboBox cmb_Counterpart;
         private System.Windows.Forms.Label label1;
