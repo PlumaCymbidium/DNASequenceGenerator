@@ -46,6 +46,7 @@ namespace Pluma.DNASerialGenerator.Core
                         complementarySerial += "c";
                         break;
                     default:
+                        complementarySerial += "*";
                         break;
                 }
             }
@@ -62,7 +63,7 @@ namespace Pluma.DNASerialGenerator.Core
 
 public enum CountpartType
 {
-    ReverseComplement = 0,
-    Reverse = 1,
-    Complement = 2
+    ReverseComplement = 1,
+    Reverse = 2,
+    Complement = 3
 }
