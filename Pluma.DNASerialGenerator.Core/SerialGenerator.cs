@@ -33,6 +33,18 @@ namespace Pluma.DNASerialGenerator.Core
                     case 'G':
                         complementarySerial += "C";
                         break;
+                    case 'a':
+                        complementarySerial += "t";
+                        break;
+                    case 't':
+                        complementarySerial += "a";
+                        break;
+                    case 'c':
+                        complementarySerial += "g";
+                        break;
+                    case 'g':
+                        complementarySerial += "c";
+                        break;
                     default:
                         break;
                 }

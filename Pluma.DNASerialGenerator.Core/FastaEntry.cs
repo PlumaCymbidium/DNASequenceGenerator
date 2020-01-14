@@ -11,7 +11,7 @@ namespace Pluma.DNASerialGenerator.Core
 
         public override string ToString()
         {
-            return Name + "\n" + Sequence;
+            return ">" + Name + "\n" + Sequence.ToString();
         }
     }
 }

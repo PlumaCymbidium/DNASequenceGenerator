@@ -35,6 +35,7 @@ namespace Pluma.DNASerialGenerator
 
         private void btn_Submit_Click(object sender, EventArgs e)
         {
+            this.OutputSerials = "";
             FastaParser parser = new FastaParser(this.InputSerials);
             var fastaEntries = parser.ParseFasta();
             foreach (FastaEntry f in fastaEntries)
@@ -54,7 +55,10 @@ namespace Pluma.DNASerialGenerator
                         break;
                 }
             }
-            this.OutputSerials = fastaEntries.ToString();
+            foreach(FastaEntry entry in fastaEntries)
+            {
+                this.OutputSerials += entry.ToString();
+            }
             this.rtx_OutputSerials.Text = this.OutputSerials;
         }
 

@@ -1,38 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Pluma.DNASerialGenerator.Core
 {
     public class FastaParser
     {
-        public string[] OriginStrLines;
+        public string[] SingleSerials;
         public FastaParser(string originStr)
         {
-            this.OriginStrLines = originStr.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries); ;
+            this.SingleSerials = originStr.Split(new string[] { ">" }, StringSplitOptions.RemoveEmptyEntries);
         }
-        public IEnumerable<FastaEntry> ParseFasta()
+        public List<FastaEntry> ParseFasta()
         {
-            FastaEntry f = null;
-            foreach (string line in this.OriginStrLines)
+            List<FastaEntry> entries = new List<FastaEntry>();
+            if (SingleSerials.Length < 1) { return null; }
+            foreach (string serial in SingleSerials)
             {
-                while (line != null)
+                string[] segments = serial.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
+                
+                if (segments.Length <= 1) { return null; }
+                entries.Add(new FastaEntry
                 {
-                    if (line.StartsWith(";"))
-                        continue;
-                    if (line.StartsWith("\n"))
-                        continue;
-                    if (line.StartsWith(">"))
-                    {
-                        if (f != null)
-                            yield return f;
-                        f = new FastaEntry { Name = line.Substring(1), Sequence = new StringBuilder() };
-                    }
-                    else if (f != null)
-                        f.Sequence.Append(line);
-                }
+                    Name = segments[0],
+                    Sequence = new StringBuilder(string.Join(" ",segments.Skip(1)))
+                });
             }
-            yield return f;
+            return entries;
         }
 
     }
