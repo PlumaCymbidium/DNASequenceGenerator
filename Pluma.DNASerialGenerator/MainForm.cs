@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,14 @@ namespace Pluma.DNASerialGenerator
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void ClearSerials()
+        {
+            this.InputSerials = "";
+            this.rtx_OriginSerials.Text = "";
+            this.OutputSerials = "";
+            this.rtx_OutputSerials.Text = "";
         }
 
         private void rtx_OriginSerials_TextChanged(object sender, EventArgs e)
@@ -91,17 +100,31 @@ namespace Pluma.DNASerialGenerator
 
         private void btn_Clear_Click(object sender, EventArgs e)
         {
-            this.InputSerials = "";
-            this.rtx_OriginSerials.Text = "";
-            this.rtx_OutputSerials.Text = "";
+            ClearSerials();
         }
 
         private void btn_Import_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dialog = new OpenFileDialog();
-            if (dialog.ShowDialog() == DialogResult.OK)
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text file(*.txt)|*.txt|FASTA file(*.fasta)|*.fasta";
+            openFileDialog.Multiselect = true;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                String FileString = dialog.FileName;
+                ClearSerials();
+                foreach (string file in openFileDialog.FileNames)
+                {
+                    string pathName = Path.GetDirectoryName(file);
+                    string fileName = Path.GetFileNameWithoutExtension(file);
+                    StreamReader sr = new StreamReader(file);
+                    this.InputSerials += "// " + pathName + fileName + "\n";
+                    string line;
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        this.InputSerials += line + "\n";
+                    }
+                    sr.Close();
+                }
+                this.rtx_OriginSerials.Text = this.InputSerials;
             }
             else MessageBox.Show("Please select at least one file. ");
         }
