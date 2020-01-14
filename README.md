@@ -20,6 +20,22 @@ of no damn use, just for fun :joy: :joy: :joy:
 
 ### Solution A
 
+We have our own tool!!! :v: :smile:
+
+#### Usage
+
+#### Development log
+
+* winform based on .Net Core does not yet support desinger :unamused: :unamused: :unamused:  
+[Updates to .NET Core Windows Forms designer in Visual Studio 16.5 Preview 1](https://devblogs.microsoft.com/dotnet/updates-to-net-core-windows-forms-designer-in-visual-studio-16-5-preview-1/)  
+Update Visual Studio Enterprise 2019 16.4.2(current latest version) -> Preview 16.5.0 Preview 1.0(current latest preview version) :smirk:
+
+* ToolStrip和MenuStrip在基于.Net Core的Winform中暂时不支持，考虑后续想办法更新 :unamused: :unamused: :unamused:
+
+* 为了性能FASTA的序列部分用了StringBuilder，但是不是线程安全的，后续更新如果涉及多线程需要更改为StringBuffer :sun_with_face:
+
+### Solution B
+
 **use online script** :relaxed: (click the following links)
 > [BioInformatics :link: ](http://www.bioinformatics.org/sms/rev_comp.html)  
 > [GenScript :link: ](https://www.genscript.com/sms2/rev_comp.html)  
@@ -48,18 +64,6 @@ LRYLRYRAEKDPARGMFKRFYGAEWTEEYIHGFLFDLERKLTVVK
 > * in amino acid sequences, U and * are acceptable letters (see below).
 > * any numerical digits in the query sequence should either be removed or replaced by appropriate letter codes (e.g., N for unknown nucleic acid residue or X for unknown amino acid residue).  
 > Reference[:link:](https://zhanglab.ccmb.med.umich.edu/FASTA/)  
-
-### Solution B
-
-#### Development log
-
-* winform based on .Net Core does not yet support desinger :unamused: :unamused: :unamused:  
-[Updates to .NET Core Windows Forms designer in Visual Studio 16.5 Preview 1](https://devblogs.microsoft.com/dotnet/updates-to-net-core-windows-forms-designer-in-visual-studio-16-5-preview-1/)  
-Update Visual Studio Enterprise 2019 16.4.2(current latest version) -> Preview 16.5.0 Preview 1.0(current latest preview version) :smirk:
-
-* ToolStrip和MenuStrip在基于.Net Core的Winform中暂时不支持，考虑后续想办法更新 :unamused: :unamused: :unamused:
-
-* 为了性能FASTA的序列部分用了StringBuilder，但是不是线程安全的，后续更新如果涉及多线程需要更改为StringBuffer :sun_with_face:
 
 ### Solution C
 
