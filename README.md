@@ -15,14 +15,25 @@ of no damn use, just for fun :joy: :joy: :joy:
 
 > <http://wikihow.com/Find-the-Reverse-Complement-of-a-DNA-Sequence>  
 > [FASTA format :link:](https://en.wikipedia.org/wiki/FASTA_format)  
+> <https://rosettacode.org/wiki/FASTA_format#C.23>  
 
 ## Solutions
 
 ### Solution A
 
-We have our own tool!!! :v: :smile:
+We have our own tool!!! :v: :smile:  
+It is windows form app based on [.Net Core](https://docs.microsoft.com/en-us/dotnet/core/) in [C#](https://docs.microsoft.com/en-us/dotnet/csharp/) with [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/?view=vs-2019)
 
 #### Usage
+
+* 在Input的文本框中输入FASTA格式的序列或直接输入序列，
+选择好要生成的是哪种序列（反向、互补、反向互补），
+点击提交按钮，会在Output文本框生成目标序列。
+* 点击导入按钮选择要导入的文件，支持文本文档和FASTA文件，支持多选文件。
+（所有）文件内容会全部显示在Input文本框中，
+同上选择目标序列形式，点击提交即可。
+* 点击导出按钮，选择路径，命名文件，选择导出格式，支持文本文档和FASTA文件。
+会将生成的序列导出到指定文件，内容参考Output文本框。
 
 #### Development log
 

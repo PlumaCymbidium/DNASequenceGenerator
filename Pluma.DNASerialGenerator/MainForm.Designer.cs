@@ -54,7 +54,7 @@
             this.lbl_Input.AutoSize = true;
             this.lbl_Input.Location = new System.Drawing.Point(77, 103);
             this.lbl_Input.Name = "lbl_Input";
-            this.lbl_Input.Size = new System.Drawing.Size(90, 17);
+            this.lbl_Input.Size = new System.Drawing.Size(110, 20);
             this.lbl_Input.TabIndex = 1;
             this.lbl_Input.Text = "Input serial(s):";
             // 
@@ -63,7 +63,7 @@
             this.lbl_Output.AutoSize = true;
             this.lbl_Output.Location = new System.Drawing.Point(77, 293);
             this.lbl_Output.Name = "lbl_Output";
-            this.lbl_Output.Size = new System.Drawing.Size(100, 17);
+            this.lbl_Output.Size = new System.Drawing.Size(124, 20);
             this.lbl_Output.TabIndex = 2;
             this.lbl_Output.Text = "Output serial(s):";
             // 
@@ -105,7 +105,7 @@
             "Complement"});
             this.cmb_Counterpart.Location = new System.Drawing.Point(77, 65);
             this.cmb_Counterpart.Name = "cmb_Counterpart";
-            this.cmb_Counterpart.Size = new System.Drawing.Size(257, 25);
+            this.cmb_Counterpart.Size = new System.Drawing.Size(257, 28);
             this.cmb_Counterpart.TabIndex = 6;
             this.cmb_Counterpart.SelectedIndexChanged += new System.EventHandler(this.cmb_Counterpart_SelectedIndexChanged);
             // 
@@ -114,7 +114,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(77, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 17);
+            this.label1.Size = new System.Drawing.Size(106, 20);
             this.label1.TabIndex = 7;
             this.label1.Text = "Counterpart: ";
             // 
@@ -136,6 +136,7 @@
             this.btn_Export.TabIndex = 9;
             this.btn_Export.Text = "Export";
             this.btn_Export.UseVisualStyleBackColor = true;
+            this.btn_Export.Click += new System.EventHandler(this.btn_Export_Click);
             // 
             // MainForm
             // 

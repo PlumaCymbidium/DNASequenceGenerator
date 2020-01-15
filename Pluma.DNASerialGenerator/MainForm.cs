@@ -106,7 +106,7 @@ namespace Pluma.DNASerialGenerator
         private void btn_Import_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Text file(*.txt)|*.txt|FASTA file(*.fasta)|*.fasta";
+            openFileDialog.Filter = "Text files (*.txt)|*.txt|FASTA files (*.fasta)|*.fasta|All files (*.*)|*.*";
             openFileDialog.Multiselect = true;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -116,11 +116,11 @@ namespace Pluma.DNASerialGenerator
                     string pathName = Path.GetDirectoryName(file);
                     string fileName = Path.GetFileNameWithoutExtension(file);
                     StreamReader sr = new StreamReader(file);
-                    this.InputSerials += "// " + pathName + fileName + "\n";
+                    this.InputSerials += $"// { pathName } { fileName }\n";
                     string line;
                     while ((line = sr.ReadLine()) != null)
                     {
-                        this.InputSerials += line + "\n";
+                        this.InputSerials += $"{ line }\n";
                     }
                     sr.Close();
                 }
@@ -145,6 +145,22 @@ namespace Pluma.DNASerialGenerator
                 default:
                     this.Countpart = 0;
                     break;
+            }
+        }
+
+        private void btn_Export_Click(object sender, EventArgs e)
+        {
+            // using (SaveFileDialog saveFileDialog = new SaveFileDialog()) // in case of the application hanging
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Text files (*.txt)|*.txt|FASTA files (*.fasta)|*.fasta";
+            saveFileDialog.FilterIndex = 2;
+            saveFileDialog.RestoreDirectory = true;
+            //saveFileDialog.FileName = $@"{cmb_Counterpart.Text}_{DateTime.Now.ToString("yyyyMMddhhmmss")}";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                //string localFilePath = saveFileDialog.FileName.ToString(); 
+                //string fileNameExt = localFilePath.Substring(localFilePath.LastIndexOf("\\") + 1);
+                File.WriteAllText(saveFileDialog.FileName, this.OutputSerials);
             }
         }
     }
