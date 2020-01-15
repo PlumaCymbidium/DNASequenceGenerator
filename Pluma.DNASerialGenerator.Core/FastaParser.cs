@@ -23,7 +23,7 @@ namespace Pluma.DNASerialGenerator.Core
             foreach (string serial in SingleSerials)
             {
                 string[] segments = serial.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
-                segments = segments.SkipWhile(s => s.StartsWith(@"//")).ToArray();
+                segments = segments.SkipWhile(s => s.StartsWith("//")).ToArray();
                 if (segments.Length <= 1) { return null; }
                 entries.Add(new FastaEntry
                 {

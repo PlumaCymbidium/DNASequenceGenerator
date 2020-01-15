@@ -54,18 +54,18 @@
             this.lbl_Input.AutoSize = true;
             this.lbl_Input.Location = new System.Drawing.Point(77, 103);
             this.lbl_Input.Name = "lbl_Input";
-            this.lbl_Input.Size = new System.Drawing.Size(110, 20);
+            this.lbl_Input.Size = new System.Drawing.Size(142, 20);
             this.lbl_Input.TabIndex = 1;
-            this.lbl_Input.Text = "Input serial(s):";
+            this.lbl_Input.Text = "Input sequence(s):";
             // 
             // lbl_Output
             // 
             this.lbl_Output.AutoSize = true;
             this.lbl_Output.Location = new System.Drawing.Point(77, 293);
             this.lbl_Output.Name = "lbl_Output";
-            this.lbl_Output.Size = new System.Drawing.Size(124, 20);
+            this.lbl_Output.Size = new System.Drawing.Size(156, 20);
             this.lbl_Output.TabIndex = 2;
-            this.lbl_Output.Text = "Output serial(s):";
+            this.lbl_Output.Text = "Output sequence(s):";
             // 
             // rtx_OutputSerials
             // 

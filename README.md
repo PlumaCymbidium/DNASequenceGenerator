@@ -16,16 +16,18 @@ of no damn use, just for fun :joy: :joy: :joy:
 > <http://wikihow.com/Find-the-Reverse-Complement-of-a-DNA-Sequence>  
 > [FASTA format :link:](https://en.wikipedia.org/wiki/FASTA_format)  
 > <https://rosettacode.org/wiki/FASTA_format#C.23>  
+> <https://vlab.amrita.edu/?sub=3&brch=273&sim=1432&cnt=1>  
 
 ## Solutions
 
 ### Solution A
 
-We have our own tool!!! :v: :smile:  
-It is windows form app based on [.Net Core](https://docs.microsoft.com/en-us/dotnet/core/) in [C#](https://docs.microsoft.com/en-us/dotnet/csharp/) with [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/?view=vs-2019)
+We have our own tool ! ! !  :v: :smile:  
+It is windows form app, which can convert a DNA sequence into its reverse, complement, or reverse-complement counterpart, based on [.Net Core](https://docs.microsoft.com/en-us/dotnet/core/) in [C#](https://docs.microsoft.com/en-us/dotnet/csharp/) with [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/?view=vs-2019)
 
 #### Usage
 
+* 项目root下的publish.zip解压缩以后点击Pluma.DNASerialGenerator.exe即可使用，可能需要安装.Net Core以及.Net Framework
 * 在Input的文本框中输入FASTA格式的序列或直接输入序列，
 选择好要生成的是哪种序列（反向、互补、反向互补），
 点击提交按钮，会在Output文本框生成目标序列。
@@ -44,6 +46,8 @@ Update Visual Studio Enterprise 2019 16.4.2(current latest version) -> Preview 1
 * ToolStrip和MenuStrip在基于.Net Core的Winform中暂时不支持，考虑后续想办法更新 :unamused: :unamused: :unamused:
 
 * 为了性能FASTA的序列部分用了StringBuilder，但是不是线程安全的，后续更新如果涉及多线程需要更改为StringBuffer :sun_with_face:
+
+* ORF(open reading frame)的概念还没搞清，后续需要更新。
 
 ### Solution B
 
@@ -80,5 +84,6 @@ LRYLRYRAEKDPARGMFKRFYGAEWTEEYIHGFLFDLERKLTVVK
 
 Use Python's existing algorithm library :smiley:
 
-> 'always do sober what you'd do drunk'
-> 
+* * *
+
+> *Always do sober what you coded you'd do drunk* :beer: :cocktail: :sake: :wine_glass: :tropical_drink: :beers:
