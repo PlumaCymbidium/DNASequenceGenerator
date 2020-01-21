@@ -1,21 +1,16 @@
-﻿using Pluma.DNASerialGenerator.Core;
+﻿using Pluma.DNASequenceGenerator.Core;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Pluma.DNASerialGenerator
+namespace Pluma.DNASequenceGenerator
 {
     public partial class MainForm : Form
     {
-        public string InputSerials;
-        public string OutputSerials;
+        public string InputSequences;
+        public string OutputSequences;
         public CountpartType Countpart;
 
         public MainForm()
@@ -23,53 +18,53 @@ namespace Pluma.DNASerialGenerator
             InitializeComponent();
         }
 
-        private void ClearSerials()
+        private void ClearSequences()
         {
-            this.InputSerials = "";
-            this.rtx_OriginSerials.Text = "";
-            this.OutputSerials = "";
-            this.rtx_OutputSerials.Text = "";
+            this.InputSequences = "";
+            this.rtx_OriginSequences.Text = "";
+            this.OutputSequences = "";
+            this.rtx_OutputSequences.Text = "";
         }
 
-        private void rtx_OriginSerials_TextChanged(object sender, EventArgs e)
+        private void rtx_OriginSequences_TextChanged(object sender, EventArgs e)
         {
-            this.InputSerials = this.rtx_OriginSerials.Text;
+            this.InputSequences = this.rtx_OriginSequences.Text;
 
         }
 
-        private void rtx_OutputSerials_TextChanged(object sender, EventArgs e)
+        private void rtx_OutputSequences_TextChanged(object sender, EventArgs e)
         {
 
         }
 
         private void btn_Submit_Click(object sender, EventArgs e)
         {
-            this.OutputSerials = "";
-            if (string.IsNullOrEmpty(this.InputSerials))
+            this.OutputSequences = "";
+            if (string.IsNullOrEmpty(this.InputSequences))
             {
                 MessageBox.Show("Please do not submit empty content. ");
                 return;
             }
-            FastaParser parser = new FastaParser(this.InputSerials);
+            FastaParser parser = new FastaParser(this.InputSequences);
             List<FastaEntry> fastaEntries = parser.ParseFasta();
             if (fastaEntries == null)
             {
                 switch (this.Countpart)
                 {
                     case CountpartType.ReverseComplement:
-                        this.OutputSerials = SerialGenerator.ReverseComplementSerial(this.InputSerials);
+                        this.OutputSequences = SequenceGenerator.ReverseComplementSequence(this.InputSequences);
                         break;
                     case CountpartType.Reverse:
-                        this.OutputSerials = SerialGenerator.ReverseSerial(this.InputSerials);
+                        this.OutputSequences = SequenceGenerator.ReverseSequence(this.InputSequences);
                         break;
                     case CountpartType.Complement:
-                        this.OutputSerials = SerialGenerator.ComplementSerial(this.InputSerials);
+                        this.OutputSequences = SequenceGenerator.ComplementSequence(this.InputSequences);
                         break;
                     default:
                         MessageBox.Show("Please choose a counterpart. ");
                         break;
                 }
-                this.rtx_OutputSerials.Text = this.OutputSerials;
+                this.rtx_OutputSequences.Text = this.OutputSequences;
                 return;
             }
             foreach (FastaEntry f in fastaEntries)
@@ -77,13 +72,13 @@ namespace Pluma.DNASerialGenerator
                 switch (this.Countpart)
                 {
                     case CountpartType.ReverseComplement:
-                        f.Sequence = new StringBuilder(SerialGenerator.ReverseComplementSerial(f.Sequence.ToString()));
+                        f.Sequence = new StringBuilder(SequenceGenerator.ReverseComplementSequence(f.Sequence.ToString()));
                         break;
                     case CountpartType.Reverse:
-                        f.Sequence = new StringBuilder(SerialGenerator.ReverseSerial(f.Sequence.ToString()));
+                        f.Sequence = new StringBuilder(SequenceGenerator.ReverseSequence(f.Sequence.ToString()));
                         break;
                     case CountpartType.Complement:
-                        f.Sequence = new StringBuilder(SerialGenerator.ComplementSerial(f.Sequence.ToString()));
+                        f.Sequence = new StringBuilder(SequenceGenerator.ComplementSequence(f.Sequence.ToString()));
                         break;
                     default:
                         MessageBox.Show("Please choose a counterpart. ");
@@ -92,15 +87,15 @@ namespace Pluma.DNASerialGenerator
             }
             foreach (FastaEntry entry in fastaEntries)
             {
-                this.OutputSerials += entry.ToString();
+                this.OutputSequences += entry.ToString();
             }
-            this.rtx_OutputSerials.Text = this.OutputSerials;
+            this.rtx_OutputSequences.Text = this.OutputSequences;
 
         }
 
         private void btn_Clear_Click(object sender, EventArgs e)
         {
-            ClearSerials();
+            ClearSequences();
         }
 
         private void btn_Import_Click(object sender, EventArgs e)
@@ -110,21 +105,21 @@ namespace Pluma.DNASerialGenerator
             openFileDialog.Multiselect = true;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                ClearSerials();
+                ClearSequences();
                 foreach (string file in openFileDialog.FileNames)
                 {
                     string pathName = Path.GetDirectoryName(file);
                     string fileName = Path.GetFileNameWithoutExtension(file);
                     StreamReader sr = new StreamReader(file);
-                    this.InputSerials += $"// { pathName } { fileName }\n";
+                    this.InputSequences += $"// { pathName } { fileName }\n";
                     string line;
                     while ((line = sr.ReadLine()) != null)
                     {
-                        this.InputSerials += $"{ line }\n";
+                        this.InputSequences += $"{ line }\n";
                     }
                     sr.Close();
                 }
-                this.rtx_OriginSerials.Text = this.InputSerials;
+                this.rtx_OriginSequences.Text = this.InputSequences;
             }
             else MessageBox.Show("Please select at least one file. ");
         }
@@ -160,7 +155,7 @@ namespace Pluma.DNASerialGenerator
             {
                 //string localFilePath = saveFileDialog.FileName.ToString(); 
                 //string fileNameExt = localFilePath.Substring(localFilePath.LastIndexOf("\\") + 1);
-                File.WriteAllText(saveFileDialog.FileName, this.OutputSerials);
+                File.WriteAllText(saveFileDialog.FileName, this.OutputSequences);
             }
         }
     }

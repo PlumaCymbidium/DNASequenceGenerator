@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29521.150
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pluma.DNASerialGenerator", "Pluma.DNASerialGenerator\Pluma.DNASerialGenerator.csproj", "{61266649-27CF-4F30-9D83-A3BD3AB2AEC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pluma.DNASequenceGenerator", "Pluma.DNASequenceGenerator\Pluma.DNASequenceGenerator.csproj", "{61266649-27CF-4F30-9D83-A3BD3AB2AEC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pluma.DNASerialGenerator.Core", "Pluma.DNASerialGenerator.Core\Pluma.DNASerialGenerator.Core.csproj", "{4D253A29-BBCC-4DC4-A4E9-63DC7920F524}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pluma.DNASequenceGenerator.Core", "Pluma.DNASequenceGenerator.Core\Pluma.DNASequenceGenerator.Core.csproj", "{4D253A29-BBCC-4DC4-A4E9-63DC7920F524}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

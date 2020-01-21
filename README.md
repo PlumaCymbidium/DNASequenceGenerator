@@ -1,4 +1,4 @@
-# DNA Serial Genrator :space_invader:
+# DNA Sequence Generator :space_invader:
 
 ## Requirements analysis
 
@@ -27,7 +27,7 @@ It is windows form app, which can convert a DNA sequence into its reverse, compl
 
 #### Usage
 
-* 项目root下的publish.zip解压缩以后点击Pluma.DNASerialGenerator.exe即可使用，可能需要安装.Net Core以及.Net Framework
+* 项目root下的publish.zip解压缩以后点击Pluma.DNASequenceGenerator.exe即可使用，可能需要安装.Net Core以及.Net Framework
 * 在Input的文本框中输入FASTA格式的序列或直接输入序列，
 选择好要生成的是哪种序列（反向、互补、反向互补），
 点击提交按钮，会在Output文本框生成目标序列。
@@ -47,7 +47,7 @@ Update Visual Studio Enterprise 2019 16.4.2(current latest version) -> Preview 1
 
 * 为了性能FASTA的序列部分用了StringBuilder，但是不是线程安全的，后续更新如果涉及多线程需要更改为StringBuffer :sun_with_face:
 
-* ORF(open reading frame)的概念还没搞清，后续需要更新。
+* ORF(open reading frame)的概念已经搞清楚了，好像对于版本迭代并无帮助 :sweat_smile: 
 
 ### Solution B
 
