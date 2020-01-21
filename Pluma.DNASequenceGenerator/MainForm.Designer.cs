@@ -1,4 +1,4 @@
-﻿namespace Pluma.DNASerialGenerator
+﻿namespace Pluma.DNASequenceGenerator
 {
     partial class MainForm
     {
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rtx_OriginSerials = new System.Windows.Forms.RichTextBox();
+            this.rtx_OriginSequences = new System.Windows.Forms.RichTextBox();
             this.lbl_Input = new System.Windows.Forms.Label();
             this.lbl_Output = new System.Windows.Forms.Label();
-            this.rtx_OutputSerials = new System.Windows.Forms.RichTextBox();
+            this.rtx_OutputSequences = new System.Windows.Forms.RichTextBox();
             this.btn_Submit = new System.Windows.Forms.Button();
             this.btn_Clear = new System.Windows.Forms.Button();
             this.cmb_Counterpart = new System.Windows.Forms.ComboBox();
@@ -40,14 +40,14 @@
             this.btn_Export = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // rtx_OriginSerials
+            // rtx_OriginSequences
             // 
-            this.rtx_OriginSerials.Location = new System.Drawing.Point(77, 123);
-            this.rtx_OriginSerials.Name = "rtx_OriginSerials";
-            this.rtx_OriginSerials.Size = new System.Drawing.Size(729, 167);
-            this.rtx_OriginSerials.TabIndex = 0;
-            this.rtx_OriginSerials.Text = "";
-            this.rtx_OriginSerials.TextChanged += new System.EventHandler(this.rtx_OriginSerials_TextChanged);
+            this.rtx_OriginSequences.Location = new System.Drawing.Point(77, 123);
+            this.rtx_OriginSequences.Name = "rtx_OriginSequences";
+            this.rtx_OriginSequences.Size = new System.Drawing.Size(729, 167);
+            this.rtx_OriginSequences.TabIndex = 0;
+            this.rtx_OriginSequences.Text = "";
+            this.rtx_OriginSequences.TextChanged += new System.EventHandler(this.rtx_OriginSequences_TextChanged);
             // 
             // lbl_Input
             // 
@@ -67,14 +67,14 @@
             this.lbl_Output.TabIndex = 2;
             this.lbl_Output.Text = "Output sequence(s):";
             // 
-            // rtx_OutputSerials
+            // rtx_OutputSequences
             // 
-            this.rtx_OutputSerials.Location = new System.Drawing.Point(77, 313);
-            this.rtx_OutputSerials.Name = "rtx_OutputSerials";
-            this.rtx_OutputSerials.Size = new System.Drawing.Size(729, 193);
-            this.rtx_OutputSerials.TabIndex = 3;
-            this.rtx_OutputSerials.Text = "";
-            this.rtx_OutputSerials.TextChanged += new System.EventHandler(this.rtx_OutputSerials_TextChanged);
+            this.rtx_OutputSequences.Location = new System.Drawing.Point(77, 313);
+            this.rtx_OutputSequences.Name = "rtx_OutputSequences";
+            this.rtx_OutputSequences.Size = new System.Drawing.Size(729, 193);
+            this.rtx_OutputSequences.TabIndex = 3;
+            this.rtx_OutputSequences.Text = "";
+            this.rtx_OutputSequences.TextChanged += new System.EventHandler(this.rtx_OutputSequences_TextChanged);
             // 
             // btn_Submit
             // 
@@ -145,14 +145,14 @@
             this.Controls.Add(this.btn_Import);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmb_Counterpart);
-            this.Controls.Add(this.rtx_OriginSerials);
+            this.Controls.Add(this.rtx_OriginSequences);
             this.Controls.Add(this.lbl_Input);
             this.Controls.Add(this.lbl_Output);
             this.Controls.Add(this.btn_Clear);
             this.Controls.Add(this.btn_Submit);
-            this.Controls.Add(this.rtx_OutputSerials);
+            this.Controls.Add(this.rtx_OutputSequences);
             this.Name = "MainForm";
-            this.Text = "DNA Serial Generator";
+            this.Text = "DNA Sequence Generator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,10 +160,10 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox rtx_OriginSerials;
+        private System.Windows.Forms.RichTextBox rtx_OriginSequences;
         private System.Windows.Forms.Label lbl_Input;
         private System.Windows.Forms.Label lbl_Output;
-        private System.Windows.Forms.RichTextBox rtx_OutputSerials;
+        private System.Windows.Forms.RichTextBox rtx_OutputSequences;
         private System.Windows.Forms.Button btn_Submit;
         private System.Windows.Forms.Button btn_Clear;
         private System.Windows.Forms.ComboBox cmb_Counterpart;

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace Pluma.DNASerialGenerator.Core
+namespace Pluma.DNASequenceGenerator.Core
 {
     public class FastaEntry
     {
