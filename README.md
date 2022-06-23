@@ -86,4 +86,4 @@ Use Python's existing algorithm library :smiley:
 
 * * *
 
-> *Always do sober what you coded you'd do drunk* :beer: :cocktail: :sake: :wine_glass: :tropical_drink: :beers:
+> *Always code sober what you said you'd code drunk* :beer: :cocktail: :sake: :wine_glass: :tropical_drink: :beers:
